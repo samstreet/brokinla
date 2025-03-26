@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from "next/link";
 import Footer from '../components/footer'
 
 export default function Home() {
@@ -11,10 +12,10 @@ export default function Home() {
             Brokinla
           </div>
           <div className="space-x-4">
-            <a href="/" className="text-brand-text hover:text-brand-primary">Home</a>
-            <a href="selsig" className="text-brand-text hover:text-brand-primary">Selsig</a>
-            <a href="elska" className="text-brand-text hover:text-brand-primary">Elska</a>
-            <a href="blog" className="text-brand-text hover:text-brand-primary">Blog</a>
+            <Link href="/" className="text-brand-text hover:text-brand-primary">Home</Link>
+            <Link href="selsig" className="text-brand-text hover:text-brand-primary">Selsig</Link>
+            <Link href="elska" className="text-brand-text hover:text-brand-primary">Elska</Link>
+            <Link href="blog" className="text-brand-text hover:text-brand-primary">Blog</Link>
           </div>
         </div>
       </nav>
@@ -30,18 +31,18 @@ export default function Home() {
               Professional dog boarding and daycare that feels like a second home for your beloved pets.
             </p>
             <div className="flex space-x-4">
-              <a 
+              <Link 
                 href="#" 
                 className="brand-primary text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition"
               >
                 Book Now
-              </a>
-              <a 
+              </Link>
+              <Link 
                 href="#" 
                 className="brand-secondary text-white px-6 py-3 rounded-lg hover:bg-green-700 transition"
               >
                 Learn More
-              </a>
+              </Link>
             </div>
           </div>
           <div>

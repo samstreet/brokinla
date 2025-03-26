@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from "next/link";
 import Footer from './components/footer'
 import Header from './components/header'
 
@@ -18,18 +19,18 @@ export default function Home() {
               Professional dog boarding and daycare that feels like a second home for your beloved pets.
             </p>
             <div className="flex space-x-4">
-              <a 
+              <Link 
                 href="#" 
                 className="brand-primary text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition"
               >
                 Book Now
-              </a>
-              <a 
+              </Link>
+              <Link 
                 href="#" 
                 className="brand-secondary text-white px-6 py-3 rounded-lg hover:bg-green-700 transition"
               >
                 Learn More
-              </a>
+              </Link>
             </div>
           </div>
           <div>
