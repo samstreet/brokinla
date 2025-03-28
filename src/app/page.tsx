@@ -1,64 +1,39 @@
 import React from 'react'
-import Link from "next/link";
 import Footer from './components/footer'
 import Header from './components/header'
+import Hero from './components/hero';
+import { metadata } from './layout';
+import Image from 'next/image';
+
 
 export default function Home() {
+  metadata.title = 'Brokinla'
+
   return (
     <div className="min-h-screen flex flex-col">
       <Header/>
 
       {/* Hero Section */}
       <main className="flex-grow">
-        <div className="max-w-6xl mx-auto px-4 py-16 grid md:grid-cols-2 items-center gap-12">
-          <div>
-            <h1 className="text-5xl font-bold mb-6 text-brand-text">
-              Exceptional Care for Your Furry Friends
-            </h1>
-            <p className="text-xl text-gray-600 mb-8">
-              Professional dog boarding and daycare that feels like a second home for your beloved pets.
-            </p>
-            <div className="flex space-x-4">
-              <Link 
-                href="#" 
-                className="brand-primary text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition"
-              >
-                Book Now
-              </Link>
-              <Link 
-                href="#" 
-                className="brand-secondary text-white px-6 py-3 rounded-lg hover:bg-green-700 transition"
-              >
-                Learn More
-              </Link>
-            </div>
-          </div>
-          <div>
-            <img 
-              src="/images/hero-dog.png" 
-              alt="Happy Dog" 
-              className="rounded-xl"
-            />
-          </div>
-        </div>
+        <Hero />
 
         {/* Services Overview */}
-        <section className="bg-white py-16">
+        <section className="bg-white py-4">
           <div className="max-w-6xl mx-auto px-4">
             <h2 className="text-3xl font-bold text-center mb-12 text-brand-text">
-              Our Services
+              Our Dogs
             </h2>
             <div className="grid md:grid-cols-2 gap-8">
               {[
                 {
                   title: "Selsig",
                   description: "Comfortable overnight stays with individual care.",
-                  icon: "🐶"
+                  src: "/images/hero-dog.png"
                 },
                 {
                   title: "Elska",
                   description: "Fun-filled days with supervised playtime.",
-                  icon: "🐶"
+                  src: "/images/elska.png"
                 },
               ].map((service, index) => (
                 <div 
@@ -67,7 +42,7 @@ export default function Home() {
                 >
                   <div className='flex'>
                     <img 
-                      src="/images/hero-dog.png"
+                      src={service.src}
                       alt="Happy Dog" 
                       className="mb-4 max-w-24 max-h-24 justify-between m-auto"
                     />

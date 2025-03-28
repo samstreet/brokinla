@@ -1,8 +1,10 @@
 import React from 'react'
-import Link from "next/link";
 import Header from '../components/header'
+import { metadata } from '../layout'
 
 export default function Home() {
+  metadata.title = 'Brokinla | Elska'
+
   return (
     <div className="min-h-screen flex flex-col">
       <Header/>
@@ -10,35 +12,7 @@ export default function Home() {
       {/* Hero Section */}
       <main className="flex-grow">
         <div className="max-w-6xl mx-auto px-4 py-16 grid md:grid-cols-2 items-center gap-12">
-          <div>
-            <h1 className="text-5xl font-bold mb-6 text-brand-text">
-              Exceptional Care for Your Furry Friends
-            </h1>
-            <p className="text-xl text-gray-600 mb-8">
-              Professional dog boarding and daycare that feels like a second home for your beloved pets.
-            </p>
-            <div className="flex space-x-4">
-              <Link 
-                href="#" 
-                className="brand-primary text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition"
-              >
-                Book Now
-              </Link>
-              <Link 
-                href="#" 
-                className="brand-secondary text-white px-6 py-3 rounded-lg hover:bg-green-700 transition"
-              >
-                Learn More
-              </Link>
-            </div>
-          </div>
-          <div>
-            <img 
-              src="/images/hero-dog.png"
-              alt="Happy Dog" 
-              className="rounded-xl"
-            />
-          </div>
+          Elska
         </div>
       </main>
 
