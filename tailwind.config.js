@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+const { fontFamily } = require("tailwindcss/defaultTheme");
 module.exports = {
     content: [
       './pages/**/*.{js,ts,jsx,tsx}',
@@ -13,7 +14,7 @@ module.exports = {
           'brand-text': '#333333',
         },
         fontFamily: {
-          'sans': ['Inter', 'ui-sans-serif', 'system-ui'],
+          'sans': ['Montserrat', ...fontFamily.sans],
         },
         backgroundImage: {
           'gradient-primary': 'linear-gradient(135deg, #4A90E2 0%, #6D41D0 100%)',
