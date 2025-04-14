@@ -3,11 +3,16 @@ import Footer from './components/footer'
 import Header from './components/header'
 import Hero from './components/hero';
 import { metadata } from './layout';
+import { type SanityDocument } from "next-sanity";
+import { client } from "@/sanity/client";
+import Link from 'next/link';
 
+const POST_QUERY = `*[_type == "dogs"]`;
+const options = { next: { revalidate: 30 } };
 
-export default function Home() {
+export default async function Home() {
   metadata.title = 'Brokinla'
-
+  const dogs = await client.fetch<SanityDocument>(POST_QUERY, [], options);
   return (
     <div className="min-h-screen flex flex-col">
       <Header/>
@@ -23,32 +28,22 @@ export default function Home() {
               Our Dogs
             </h2>
             <div className="grid md:grid-cols-2 gap-8">
-              {[
-                {
-                  title: "Selsig",
-                  description: "Comfortable overnight stays with individual care.",
-                  src: "/images/hero-dog.png"
-                },
-                {
-                  title: "Elska",
-                  description: "Fun-filled days with supervised playtime.",
-                  src: "/images/elska.png"
-                },
-              ].map((service, index) => (
-                <div 
-                  key={index} 
+              {dogs.map((dog: {name: string}, index: number) => (
+                <Link href={`/dogs/${dog.name}`} key={index} >
+                  <div 
                   className="brand-background p-6 rounded-xl items-center text-center shadow-md"
                 >
                   <div className='flex'>
                     <img 
-                      src={service.src}
+                      src={`/images/${dog.name}.png`}
                       alt="Happy Dog" 
                       className="mb-4 max-w-24 max-h-24 justify-between m-auto"
                     />
                   </div>
-                  <h3 className="text-xl font-semibold mb-4">{service.title}</h3>
-                  <p className="text-gray-600">{service.description}</p>
+                  <h3 className="text-xl font-semibold mb-4">{dog.name}</h3>
                 </div>
+                </Link>
+                
               ))}
             </div>
           </div>

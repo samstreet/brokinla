@@ -5,10 +5,10 @@ export default function Hero() {
         <div className="max-w-6xl mx-auto px-4 py-4 grid md:grid-cols-2 items-center gap-12">
           <div>
             <h1 className="text-5xl font-bold mb-6 text-brand-text">
-              Exceptional Care for Your Furry Friends
+              Brokinla: Championship Show Dogs
             </h1>
             <p className="text-xl text-gray-600 mb-8">
-              Professional dog boarding and daycare that feels like a second home for your beloved pets.
+              Where Pedigree Meets Perfection
             </p>
           </div>
           <div>
