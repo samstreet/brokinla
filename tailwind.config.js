@@ -8,7 +8,7 @@ module.exports = {
     theme: {
       extend: {
         colors: {
-          'charcoal': '#333333',
+          '--color-charcoal': '#333333',
         },
       },
     },

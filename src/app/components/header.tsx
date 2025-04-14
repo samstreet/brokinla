@@ -3,16 +3,16 @@ import React from "react";
 
 export default function Header() {
     return (
-        <nav className="bg-purple-200 shadow-md">
-            <div className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+        <nav className="bg-purple-200 shadow-sm border-b font-medium">
+            <div className="max-w-6xl mx-auto px-6 md:px-12 py-4 flex justify-between items-center">
                 <div className="text-2xl font-bold text-brand-primary">
                     <img src="/images/brokinla.png" className="w-24"/>
                 </div>
-                <div className="space-x-4">
-                <Link href="/" className="text-brand-text hover:text-brand-primary">Home</Link>
-                <Link href="/dogs/selsig" className="text-brand-text hover:text-brand-primary">Selsig</Link>
-                <Link href="/dogs/elska" className="text-brand-text hover:text-brand-primary">Elska</Link>
-                <Link href="/blog" className="text-brand-text hover:text-brand-primary">Blog</Link>
+                <div className="space-x-4 ">
+                <Link href="/" className="hover:text-purple-800 transition-colors">Home</Link>
+                <Link href="/dogs/selsig" className="hover:text-purple-800 transition-colors">Selsig</Link>
+                <Link href="/dogs/elska" className="hover:text-purple-800 transition-colors">Elska</Link>
+                <Link href="/blog" className="hover:text-purple-800 transition-colors">Blog</Link>
                 </div>
             </div>
         </nav>
