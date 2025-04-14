@@ -3,7 +3,7 @@ import React from "react";
 
 export default function Header() {
     return (
-        <nav className="bg-primary shadow-md">
+        <nav className="bg-purple-200 shadow-md">
             <div className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
                 <div className="text-2xl font-bold text-brand-primary">
                     <img src="/images/brokinla.png" className="w-24"/>

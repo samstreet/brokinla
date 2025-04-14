@@ -1,6 +1,5 @@
 import { type SanityDocument } from "next-sanity";
 import { client } from "@/sanity/client";
-import Link from "next/link";
 import Header from "@/app/components/header";
 import Footer from "@/app/components/footer";
 
@@ -18,9 +17,6 @@ export default async function PostPage({
       <Header/>
     
       <main className="container mx-auto min-h-screen max-w-3xl p-8 flex flex-col gap-4">
-        <Link href="/" className="hover:underline">
-          ← Back to posts
-        </Link>
         <h1 className="text-4xl font-bold mb-8">{JSON.stringify(post)}</h1>
       </main>
       <Footer />

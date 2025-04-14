@@ -19,7 +19,7 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet" />
       </head>
       <body
-        className="text-charcoal"
+        className="bg-white"
       >
         {children}
       </body>

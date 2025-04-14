@@ -35,7 +35,7 @@ export default async function Home() {
                 >
                   <div className='flex'>
                     <img 
-                      src={`/images/${dog.name}.png`}
+                      src={`/images/${dog.name.toLowerCase()}.png`}
                       alt="Happy Dog" 
                       className="mb-4 max-w-24 max-h-24 justify-between m-auto"
                     />
