@@ -4,7 +4,7 @@ export default function Shows({dog}: {dog: { name: string, shows: Array<{name: s
     return (
         <main>
             {dog.shows?.map((show: {name: string}, index: number) => (
-                <div className="relative flex w-96 flex-col rounded-lg border border-slate-200 bg-white shadow-sm">
+                <div className="relative flex w-96 flex-col rounded-lg border border-slate-200 bg-white shadow-sm" key={index}>
                 <nav className="flex min-w-[240px] flex-col gap-1 p-1.5">
                   <div
                     role="button"
