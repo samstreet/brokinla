@@ -28,22 +28,28 @@ export default async function Home() {
               Our Dogs
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
-              {dogs.map((dog: {name: string}, index: number) => (
-                <Link href={`/dogs/${dog.name}`} key={index} >
-                  <div 
-                  className="brand-background p-6 rounded-xl items-center text-center shadow-md"
-                >
-                  <div className='flex'>
-                    <img 
-                      src={`/images/${dog.name.toLowerCase()}.png`}
-                      alt="Happy Dog" 
-                      className="mb-4 max-w-24 max-h-24 justify-between m-auto"
-                    />
+              {dogs.map((dog: {name: string, slug: string, body: Array<object>}, index: number) => (
+                <Link href={`/dogs/${dog.slug}`} key={index} >
+                  <div className="brand-background p-6 rounded-xl items-center text-center shadow-md">
+                    <div className='flex'>
+                      <img 
+                        src={`/images/${dog.name.toLowerCase()}.png`}
+                        alt="Happy Dog" 
+                        className="mb-4 max-w-24 max-h-24 justify-between m-auto"
+                      />
+                    </div>
+                    <h3 className="text-3xl font-bold text-center mb-12">{dog.name}</h3>
+                    {dog.body.map((block: object, blockIndex: number) => (
+                      <div key={blockIndex} className="mb-4 p-3">
+                          {block.children.map((child: {marks: string, text: string}, childIndex: number) => (
+                            <div key={childIndex} className="mb-2 p-2">
+                              <p>{child.text}</p>
+                            </div>
+                          ))}
+                      </div>
+                    ))}
                   </div>
-                  <h3 className="text-3xl font-bold text-center mb-12">{dog.name}</h3>
-                </div>
                 </Link>
-                
               ))}
             </div>
           </div>
