@@ -2,7 +2,6 @@ import { type SanityDocument } from "next-sanity";
 import { client } from "@/sanity/client";
 import Header from "@/app/components/header";
 import Footer from "@/app/components/footer";
-import { log } from "console";
 
 const POST_QUERY = `*[_type == "dogs" && slug == $dog][0]{
   name,
