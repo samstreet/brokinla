@@ -39,16 +39,6 @@ export default async function Home() {
                       />
                     </div>
                     <h3 className="text-3xl font-bold text-center mb-12">{dog.name}</h3>
-                    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-                    {dog.body.map((block: any, blockIndex: number) => (
-                      <div key={blockIndex} className="mb-4 p-3">
-                          {block.children.map((child: {marks: string, text: string}, childIndex: number) => (
-                            <div key={childIndex} className="mb-2 p-2">
-                              <p>{child.text}</p>
-                            </div>
-                          ))}
-                      </div>
-                    ))}
                   </div>
                 </Link>
               ))}
