@@ -26,7 +26,7 @@ export default async function PostPage({
     
       <main className="container mx-auto min-h-screen max-w-3xl p-8 flex flex-col gap-4">
         <h1 className="text-4xl font-bold mb-8">{dog.name}</h1>
-        {dog.shows?.forEach((show: any, showIndex: number) => {
+        {dog.shows?.forEach((show, showIndex: number) => {
           <div className="relative flex w-96 flex-col rounded-lg border border-slate-200 bg-white shadow-sm" key={showIndex}>
             <nav className="flex min-w-[240px] flex-col gap-1 p-1.5">
               <div
