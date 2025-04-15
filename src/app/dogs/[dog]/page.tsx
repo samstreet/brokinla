@@ -1,4 +1,3 @@
-import { type SanityDocument } from "next-sanity";
 import { client } from "@/sanity/client";
 import Header from "@/app/components/header";
 import Footer from "@/app/components/footer";
@@ -21,7 +20,6 @@ export default async function PostPage({
   params: Promise<{ dog: string }>;
 }) {
   const dog = await client.fetch(POST_QUERY, await params, options);
-  console.log(dog);
 
   return (
     <div className="min-h-screen flex flex-col">
