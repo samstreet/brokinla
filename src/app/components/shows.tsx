@@ -1,9 +1,9 @@
 import React from "react";
 
-export default function Shows({dog}: {dog: { name: string, shows: Array<{name: string}>}}) {
+export default function Shows({dog}: {dog: { name: string, slug: string, shows: Array<{name: string}>}}) {
     return (
         <main>
-            {dog.shows?.map((show: {name: string}, index: number) => (
+            {dog.shows?.map((show: {name: string,}, index: number) => (
                 <div className="relative flex w-96 flex-col rounded-lg border border-slate-200 bg-white shadow-sm" key={index}>
                 <nav className="flex min-w-[240px] flex-col gap-1 p-1.5">
                   <div
@@ -13,7 +13,7 @@ export default function Shows({dog}: {dog: { name: string, shows: Array<{name: s
                     <div className="mr-4 grid place-items-center">
                       <img
                         alt="candice"
-                        src={`/images/${dog.name}.png`}
+                        src={`/images/${dog.slug}.png`}
                         className="relative inline-block h-12 w-12 !rounded-full  object-cover object-center"
                       />
                     </div>
