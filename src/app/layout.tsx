@@ -8,7 +8,11 @@ export const metadata: Metadata = {
   description: "Brokinla",
 };
 
-const montserrat = Montserrat()
+const montserrat = Montserrat({
+  subsets: ['latin'],
+  style: ['normal', 'italic'],
+  weight: ['400']
+})
 
 export const dynamic = 'force-dynamic';
 
