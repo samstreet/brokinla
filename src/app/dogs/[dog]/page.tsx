@@ -25,7 +25,7 @@ export default async function PostPage({
     <div className="min-h-screen flex flex-col">
       <Header/>
     
-      <main className="container mx-auto min-h-screen max-w-3xl p-8 flex flex-col gap-4">
+      <main className="min-h-100 container mx-auto max-w-3xl p-8 flex flex-col gap-4">
         <h1 className="text-4xl font-bold mb-8">{dog.name}</h1>
         <Shows dog={dog} />
       </main>
