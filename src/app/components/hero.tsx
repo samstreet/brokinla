@@ -7,8 +7,8 @@ export default function Hero() {
             <h1 className="mb-4 text-brand-text text-4xl md:text-5xl font-bold tracking-tight">
               Brokinla: Championship Show Dogs
             </h1>
-            <p className="text-xl text-gray-600 mb-4">
-              Where Pedigree Meets Perfection
+            <p className="text-purple-800 font-semibold italic text-center mt-8">
+              Where pedigree meets perfection.
             </p>
           </div>
         </div>

@@ -27,7 +27,7 @@ export default function RootLayout({
         <Analytics/>
       </head>
       <body
-        className="bg-gray-50"
+        className="bg-purple-100"
       >
         {children}
       </body>

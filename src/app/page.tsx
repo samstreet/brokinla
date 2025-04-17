@@ -6,6 +6,7 @@ import { metadata } from './layout';
 import { type SanityDocument } from "next-sanity";
 import { client } from "@/sanity/client";
 import Link from 'next/link';
+import BrokinlaIntroduction from './components/intro';
 
 const POST_QUERY = `*[_type == "dogs"]`;
 const options = { next: { revalidate: 30 } };
@@ -19,26 +20,26 @@ export default async function Home() {
 
       {/* Hero Section */}
       <main className="flex-grow">
-        <Hero />
+
+        <BrokinlaIntroduction />
 
         {/* Services Overview */}
-        <section className="py-16 bg-gray-50">
+        <section className="py-16 bg-purple-100">
           <div className="max-w-6xl mx-auto px-4">
-            <h2 className="text-3xl font-bold text-center mb-12 text-brand-text">
+            <h2 className="text-3xl font-bold text-center mb-12 text-gray-800">
               Our Dogs
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
               {dogs.map((dog: {name: string, slug: string, body: Array<object>}, index: number) => (
                 <Link href={`/dogs/${dog.slug}`} key={index} >
-                  <div className="brand-background p-6 rounded-xl items-center text-center shadow-md">
-                    <div className='flex'>
-                      <img 
-                        src={`/images/${dog.name.toLowerCase()}.png`}
-                        alt="Happy Dog" 
-                        className="mb-4 max-w-24 max-h-24 justify-between m-auto"
-                      />
+                  <div className="bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform hover:scale-105">
+                    <div className="p-8 flex flex-col items-center">
+                      <div className="w-24 h-24 mb-4">
+                        <img src={`/images/${dog.name.toLowerCase()}.png`} alt={dog.name} className="w-full h-full object-contain" />
+                      </div>
+                      <h3 className="text-2xl font-bold text-gray-800">{dog.name}</h3>
+                      <a className="mt-4 text-purple-600 hover:underline">View Profile</a>
                     </div>
-                    <h3 className="text-3xl font-bold text-center mb-12">{dog.name}</h3>
                   </div>
                 </Link>
               ))}
@@ -46,7 +47,7 @@ export default async function Home() {
           </div>
         </section>
 
-        <div className="text-gray-600 body-font">
+        <div className="bg-purple-50 text-gray-600 body-font">
             <div className="container px-5 py-24 mx-auto">
               <div className="flex flex-col text-center w-full mb-20">
                 <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Master Cleanse Reliac Heirloom</h1>
