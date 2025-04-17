@@ -1,7 +1,6 @@
 import React from 'react'
 import Footer from './components/footer'
 import Header from './components/header'
-import Hero from './components/hero';
 import { metadata } from './layout';
 import { type SanityDocument } from "next-sanity";
 import { client } from "@/sanity/client";
