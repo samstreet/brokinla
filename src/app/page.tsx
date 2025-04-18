@@ -37,7 +37,7 @@ export default async function Home() {
                         <img src={`/images/${dog.name.toLowerCase()}.png`} alt={dog.name} className="w-full h-full object-contain" />
                       </div>
                       <h3 className="text-2xl font-bold text-gray-800">{dog.name}</h3>
-                      <a className="mt-4 text-purple-600 hover:underline">View Profile</a>
+                      <p className="mt-4 text-purple-600 hover:underline">View Profile</p>
                     </div>
                   </div>
                 </Link>

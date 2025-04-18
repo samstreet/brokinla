@@ -9,7 +9,7 @@ const POST_QUERY = `*[_type == "dogs" && slug == $dog][0]{
   slug,
   "shows": shows[] -> {
     name,
-    body
+    slug
   }
 }`;
 

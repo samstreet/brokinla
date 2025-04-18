@@ -6,9 +6,13 @@ import Shows from "@/app/components/shows";
 const POST_QUERY = `*[_type == "dogs" && slug == $dog][0]{
   name,
   slug,
-  "shows": shows[] -> {
+  "show": *[_type == "show" && slug == $show][0]{
     name,
-    body
+    slug,
+    "classes": classes[] -> {
+      name,
+      placement
+    }
   }
 }`;
 
