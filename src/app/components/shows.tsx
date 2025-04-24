@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import React from "react";
 import Pagination from "./pagination";
 import Link from "next/link";
