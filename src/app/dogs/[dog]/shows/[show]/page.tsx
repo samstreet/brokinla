@@ -34,7 +34,7 @@ export default async function DogShowPage({
     <div className="min-h-screen flex flex-col">
       <Header/>
     
-      <main className="min-h-100">
+      <main className="min-h-100 gap-4 mt-4">
         
         <section className="bg-purple-50 py-16">
           <div className=" mx-auto px-4 max-w-4xl">
@@ -63,10 +63,11 @@ export default async function DogShowPage({
             </div>
           </div>
         </section>
+        
+        <section className="mx-auto px-4 max-w-4xl py-8">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-8 text-purple-900">Classes</h2>
-        <section className="mx-auto px-4 max-w-4xl">
         {dog.show.classes && dog.show.classes.map((classItem: {name: string, placement: string}, index: number) => (
-          <div className="relative flex w-full flex-col rounded-lg border border-slate-200 bg-white hover:bg-purple-200 shadow-md my-4 transform transition-transform hover:scale-105" key={index}>
+          <div className="relative flex w-full flex-col rounded-lg border border-slate-200 bg-white shadow-md my-4 transform transition-transform" key={index}>
             <nav className="flex min-w-[240px] flex-col gap-1 p-1.5">
               <div
                 role="button"

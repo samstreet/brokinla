@@ -5,6 +5,9 @@ import Link from "next/link";
 export default function Shows({dog}: {dog: { name: string, slug: string, shows: Array<{name: string, slug: string}>}}) {
     return (
         <main>
+            <div className="flex flex-col items-center justify-center p-8 text-center">
+              <h3 className="text-3xl font-medium text-purple-900 mb-2">Shows</h3>
+            </div>
             {dog.shows?.map((show: {name: string, slug: string}, index: number) => (
               <Link href={`/dogs/${dog.name.toLowerCase()}/shows/${show.slug}`} key={index}>
                   <div className="relative flex w-full flex-col rounded-lg border border-slate-200 bg-white hover:bg-purple-200 shadow-md my-4 transform transition-transform hover:scale-105">
@@ -30,7 +33,15 @@ export default function Shows({dog}: {dog: { name: string, slug: string, shows: 
                 </div>
               </Link>
             ))}
-            <Pagination />
+            {!dog.shows?.length && 
+              <div className="flex flex-col items-center justify-center p-8 text-center">
+                <h3 className="text-lg font-medium text-gray-900 mb-2">No results found</h3>
+                <p className="text-sm text-gray-500 max-w-md mb-6">
+                  We couldn't find any matches for your search.
+                </p>
+              </div>
+            }
+            {dog.shows?.length > 10 && <Pagination />}
         </main>
     )
 }

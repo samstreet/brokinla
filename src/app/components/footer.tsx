@@ -16,11 +16,11 @@ export default function Footer() {
                         <div className="w-full px-4 lg:w-1/4 md:w-1/2">
                             <h2 className="mb-3 text-sm font-medium tracking-widest text-gray-900 uppercase title-font">Selsig</h2>
                             <nav className="mb-10 list-none">
-                            <li className="mt-3">
-                                    <a className="text-gray-500 cursor-pointer hover:text-gray-900">About</a>
+                                <li className="mt-3">
+                                    <Link href={`/dogs/selsig`} className="text-gray-500 cursor-pointer hover:text-gray-900">About</Link>
                                 </li>
                                 <li className="mt-3">
-                                    <a className="text-gray-500 cursor-pointer hover:text-gray-900">Shows</a>
+                                    <Link href={`/dogs/selsig/shows`} className="text-gray-500 cursor-pointer hover:text-gray-900">Shows</Link>
                                 </li>
                             </nav>
                         </div>
@@ -30,16 +30,16 @@ export default function Footer() {
                             <h2 className="mb-3 text-sm font-medium tracking-widest text-gray-900 uppercase title-font">Elska</h2>
                             <nav className="mb-10 list-none">
                                 <li className="mt-3">
-                                    <a className="text-gray-500 cursor-pointer hover:text-gray-900">About</a>
+                                    <Link href={`/dogs/elska`} className="text-gray-500 cursor-pointer hover:text-gray-900">About</Link>
                                 </li>
                                 <li className="mt-3">
-                                    <a className="text-gray-500 cursor-pointer hover:text-gray-900">Shows</a>
+                                    <Link href={`/dogs/elska/shows`} className="text-gray-500 cursor-pointer hover:text-gray-900">Shows</Link>
                                 </li>
                             </nav>
                         </div>
                     </div>
                 </div>
-                <div className="bg-gray-300">
+                <div className="bg-purple-100">
                     <div className="container px-5 py-4 mx-auto">
                         <p className="text-sm text-gray-700 capitalize xl:text-center">© {(new Date).getFullYear()} All rights reserved </p>
                     </div>
