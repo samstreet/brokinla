@@ -12,7 +12,7 @@ export default function Header() {
                     <Link href="/" className="text-gray-800 hover:text-purple-600 transition-colors">Home</Link>
                     <Link href="/dogs/selsig" className="text-gray-800 hover:text-purple-600 transition-colors">Selsig</Link>
                     <Link href="/dogs/elska" className="text-gray-800 hover:text-purple-600 transition-colors">Elska</Link>
-                    <Link href="/blog" className="text-gray-800 hover:text-purple-600 transition-colors">Blog</Link>
+                    {/* <Link href="/blog" className="text-gray-800 hover:text-purple-600 transition-colors">Blog</Link> */}
                 </div>
             </div>
         </nav>

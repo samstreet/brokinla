@@ -34,7 +34,7 @@ export default async function DogShowPage({
     <div className="min-h-screen flex flex-col">
       <Header/>
     
-      <main className="min-h-100 gap-4 mt-4">
+      <main className="min-h-100">
         
         <section className="bg-purple-50 py-16">
           <div className=" mx-auto px-4 max-w-4xl">
